@@ -1,20 +1,15 @@
 import csv
 
-
-
-
-
 def main():
     simAdress = []
     newname = ''
     bestanden = []
+    i=1
     while newname != 'quit':
         newname = input("Bestandsnaam of quit: \n")
         if newname != 'quit':
             bestanden.append(newname)
             print(bestanden)
-        
-    i=1
     simAdress = VergelijkBestanden(bestanden[0], bestanden[i])
     print(simAdress)
     print(len(simAdress))
@@ -23,8 +18,6 @@ def main():
         simAdress = VergelijkResultaten(temp,bestanden[i])
         print(simAdress)
         print(len(simAdress))
-
-
 
 def VergelijkBestanden(file1,file2):
     temp = []
@@ -48,7 +41,4 @@ def VergelijkResultaten(oudeAdressen,nieuwBestand):
                         newlist.append(address)
     return newlist
 
-
 main()
-
-#VergelijkBestanden(doc1,doc2)
